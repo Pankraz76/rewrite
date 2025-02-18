@@ -365,17 +365,6 @@ public class RemoveUnusedImports extends Recipe {
     }
 
     private static final Set<String> JAVA_LANG_CLASS_NAMES = new HashSet<>(Arrays.asList(
-            // java 8+
-            "IllegalCallerException",
-            "LayerInstantiationException",
-            "Module",
-            "ModuleLayer",
-            "ProcessHandle",
-            "Record",
-            "ScopedValue",
-            "StackWalker",
-            "StringTemplate",
-            "WrongThreadException",
             AbstractMethodError.class.getName(),
             Appendable.class.getName(),
             ArithmeticException.class.getName(),
@@ -471,7 +460,18 @@ public class RemoveUnusedImports extends Recipe {
             UnsupportedOperationException.class.getName(),
             VerifyError.class.getName(),
             VirtualMachineError.class.getName(),
-            Void.class.getName()
+            Void.class.getName(),
+            // java 8+
+            "IllegalCallerException",
+            "LayerInstantiationException",
+            "Module",
+            "ModuleLayer",
+            "ProcessHandle",
+            "Record",
+            "ScopedValue",
+            "StackWalker",
+            "StringTemplate",
+            "WrongThreadException"
     ));
 
     private static boolean conflictsWithJavaLang(J.Import elem) {
