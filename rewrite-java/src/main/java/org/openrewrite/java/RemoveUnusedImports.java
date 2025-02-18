@@ -365,7 +365,7 @@ public class RemoveUnusedImports extends Recipe {
     }
 
     private static final Set<String> JAVA_LANG_CLASS_NAMES = new HashSet<>(Arrays.asList(
-            // java 9
+            // java 8+
             "IllegalCallerException",
             "LayerInstantiationException",
             "Module",
